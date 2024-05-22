@@ -1,4 +1,4 @@
-from PruebaU1.app import create_app
+from app import create_app
 from flask import request
 from flask import jsonify, make_response
 app = create_app()

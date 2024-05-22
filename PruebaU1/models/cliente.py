@@ -1,9 +1,19 @@
 class Cliente:
     def __init__(self):
+        self.__id = 0
         self.__nombre = ''
         self.__apellido = ''
         self.__edad = 0
         self.__email = ''
+
+    @property
+    def _id(self):
+        return self.__id
+
+    @_id.setter
+    def _id(self, value):
+        self.__id = value
+
 
     @property
     def _nombre(self):
@@ -40,6 +50,7 @@ class Cliente:
     @property
     def serializar(self):
         return {
+            'id': self.__id,
             'nombre': self._nombre,
             'apellido': self._apellido,
             'edad': self._edad,
@@ -48,6 +59,7 @@ class Cliente:
     
     def deserializar(data):
         cliente = Cliente()
+        cliente._id = data['id']
         cliente._nombre = data['nombre']
         cliente._apellido = data['apellido']
         cliente._edad = data['edad']

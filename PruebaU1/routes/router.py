@@ -1,19 +1,19 @@
 from flask import Blueprint, jsonify, make_response,abort, request, render_template, redirect
 #from controls.personaDaoControl import PersonaDaoControl
 from controls.clienteDaoControl import ClienteDaoControl
-from controls.registroDaoControl import RegistroDaoControl
+
 
 router = Blueprint('api', __name__)
     
-@router.route('/')
-def home():
-    return render_template('template.html')
+#@router.route('/')
+#def home():
+  #  return render_template('index.html')
 
 #Lista clientes
-@router.route('/clientes')
+@router.route('/')
 def lista_clientes():
     cd = ClienteDaoControl()
-    return render_template('clientes/lista.html', lista = cd.to_dict())
+    return render_template('index.html', lista = cd.to_dict())
 
 @router.route('/registros')
 def lista_registros():

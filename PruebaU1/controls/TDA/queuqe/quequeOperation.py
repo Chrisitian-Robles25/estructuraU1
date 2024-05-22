@@ -30,8 +30,8 @@ class QuequeOperation(LinkedList):
         else:
             return self.delete(0)
         
-    def clear(self):
+    @property
+    def _clear(self):
         return self.clear
         
-    def str (self):
-        return self._list()
+  

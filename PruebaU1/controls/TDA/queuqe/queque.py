@@ -28,9 +28,8 @@ class Queque:
     def verify(self):
         return self.__queque.verifyTop
         
-    def deserealizar(self, data):
-        self.__queque.deserealizar(data)
+
 
     @property
     def clear(self):
-        self.__queque.clear
+        self.__queque._clear

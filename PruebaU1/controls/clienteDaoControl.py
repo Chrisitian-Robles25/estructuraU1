@@ -1,8 +1,9 @@
 from controls.DAO.daoAdapter import DaoAdapter
 from controls.DAO.arrayDaoAdapter import ArrayDaoAdapter
 from models.cliente import Cliente
+from controls.DAO.quequeDaoAdapter import QuequeDaoAdapter
 
-class ClienteDaoControl(DaoAdapter):
+class ClienteDaoControl(QuequeDaoAdapter):
     def __init__(self):
         super().__init__(Cliente)
         self.__cliente = None
@@ -28,8 +29,9 @@ class ClienteDaoControl(DaoAdapter):
 
     @property
     def save(self):
-        self._cliente._id = self._lista._lenght + 1  # Ajustamos el id automáticamente
-        self._save(self._cliente)
+        print(self._lista._queque._lenght)
+        self.__cliente._id = self._lista._queque._lenght + 1  # Ajustamos el id automáticamente
+        self._save(self.__cliente)
 
     def merge(self, pos):
         self._merge(self._cliente, pos)

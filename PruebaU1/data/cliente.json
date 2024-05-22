@@ -1,8 +1,16 @@
 [
     {
+        "id": 1,
         "nombre": "Christian",
         "apellido": "Cabrera",
         "edad": 18,
         "email": "juan@unl.edu.ec"
+    },
+    {
+        "id": 2,
+        "nombre": "Juan",
+        "apellido": "Perez",
+        "edad": 20,
+        "email": "perez@unl.edu.ec"
     }
 ]
